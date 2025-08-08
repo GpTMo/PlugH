@@ -15,20 +15,25 @@ Super H est un plugin d'intégration pour l'interface web de ChatGPT. Il s'inspi
 ```
 manifest.json        # Manifest MV3 pour l'extension
 src/content.js       # Script de contenu injecté sur chat.openai.com
-package.json         # Dépendances (markdown-it, postcss)
+src/style.css        # Styles du script de contenu
+package.json         # Dépendances et scripts de build
 ```
 
 ## Développement
 
-1. Installer les dépendances (facultatif pour ce squelette) :
+1. Installer les dépendances :
    ```bash
    npm install
    ```
-2. Lancer les tests (placeholder) :
+2. Construire l'extension (JS bundlé + CSS via PostCSS) :
+   ```bash
+   npm run build
+   ```
+3. Lancer les tests (placeholder) :
    ```bash
    npm test
    ```
-3. Charger le dossier comme extension non empaquetée dans votre navigateur.
+4. Charger le dossier `dist` comme extension non empaquetée dans votre navigateur.
 
 ## Ressources intégrées
 - [Superpower ChatGPT](https://github.com/saeedezzati/superpower-chatgpt)
