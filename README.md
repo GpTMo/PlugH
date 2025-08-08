@@ -6,7 +6,7 @@ Super H est un plugin d'intégration pour l'interface web de ChatGPT. Il s'inspi
 - 📝 **Notes par conversation** : stockage local et synchronisation future.
 - 🌉 **Galerie d'images** : historiser et rechercher les images générées par ChatGPT.
 - 🔄 **Synchronisation** : partage des paramètres et de l'historique entre appareils.
-- 🔊 **Voice GPT** : conversion texte/parole pour discuter avec ChatGPT.
+- 🔊 **Voice GPT** : capture micro, transcription Whisper et synthèse vocale.
 - 🖱️ **Menu contextuel** : accès rapide aux invites favorites sur tout le web.
 - 🛠️ **Utilitaires** : profils d'instructions, résumés automatiques, sélecteur de modèle, etc.
 
@@ -14,6 +14,7 @@ Super H est un plugin d'intégration pour l'interface web de ChatGPT. Il s'inspi
 
 ```
 manifest.json        # Manifest MV3 pour l'extension
+src/audio.js         # Module de capture audio et transcription
 src/content.js       # Script de contenu injecté sur chat.openai.com
 package.json         # Dépendances (markdown-it, postcss)
 ```
@@ -29,6 +30,13 @@ package.json         # Dépendances (markdown-it, postcss)
    npm test
    ```
 3. Charger le dossier comme extension non empaquetée dans votre navigateur.
+
+## Flux vocal
+
+1. Cliquez sur **Start** pour démarrer l'enregistrement via le micro.
+2. À l'arrêt (**Stop**), le flux audio est envoyé à l'API Whisper pour transcription.
+3. La transcription s'affiche dans le bandeau Super H et peut être utilisée comme entrée.
+4. À chaque réponse de ChatGPT, une synthèse vocale est générée via l'API Web Speech.
 
 ## Ressources intégrées
 - [Superpower ChatGPT](https://github.com/saeedezzati/superpower-chatgpt)
