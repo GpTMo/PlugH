@@ -9,7 +9,7 @@ Super H est un plugin d'intégration pour l'interface web de ChatGPT. Il s'inspi
 - 🔊 **Voice GPT** : conversion texte/parole pour discuter avec ChatGPT.
 - 🖱️ **Menu contextuel** : accès rapide aux invites favorites sur tout le web.
 - 🛠️ **Utilitaires** : profils d'instructions, résumés automatiques, sélecteur de modèle, etc.
-
+ 
 Le prototype actuel affiche une bannière jaune « Super H active » en haut à droite de la page. Elle comprend un bouton **Prompts** qui ouvre un petit panneau de gestion d'invites avec quelques exemples. Un clic sur l'une des invites l'insère automatiquement dans la zone de saisie de ChatGPT. La bannière peut également être fermée.
 
 ## Structure du dépôt
