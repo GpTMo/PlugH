@@ -1,0 +1,12 @@
+{
+  "name": "super-h",
+  "version": "0.1.0",
+  "description": "Super H plugin skeleton for ChatGPT web interface",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.1",
+    "postcss": "^8.4.31"
+  }
+}
