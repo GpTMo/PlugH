@@ -14,7 +14,7 @@ Super H est un plugin d'intégration pour l'interface web de ChatGPT. Il s'inspi
 
 ```
 manifest.json        # Manifest MV3 pour l'extension
-src/content.js       # Script de contenu injecté sur chat.openai.com
+src/content.js       # Script de contenu injecté sur chat.openai.com et chatgpt.com
 package.json         # Dépendances (markdown-it, postcss)
 ```
 

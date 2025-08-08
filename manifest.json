@@ -3,9 +3,16 @@
   "name": "Super H",
   "version": "0.1",
   "description": "Experimental Superpower agent for the ChatGPT web interface",
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://chat.openai.com/*"],
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*"
+      ],
       "js": ["src/content.js"],
       "run_at": "document_idle"
     }
