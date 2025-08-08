@@ -45,3 +45,9 @@ package.json         # Dépendances (markdown-it, postcss)
 - [jup-ag/plugin](https://github.com/jup-ag/plugin)
 
 Ce dépôt n'est qu'une base minimale : il sera enrichi par la suite pour offrir toutes les fonctionnalités « Super H » dans l'interface web de ChatGPT.
+
+## Intégration continue et fusion automatique
+
+Un workflow GitHub Actions (`.github/workflows/ci.yml`) exécute `npm test` sur chaque *pull request*. Dès que toutes les vérifications réussissent, la demande est automatiquement fusionnée dans la branche `main`.
+
+Pour renforcer la sécurité du dépôt, protégez la branche `main` via les paramètres GitHub et exigez la réussite de ce workflow avant toute fusion.
