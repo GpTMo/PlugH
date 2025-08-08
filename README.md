@@ -45,3 +45,4 @@ package.json         # Dépendances (markdown-it, postcss)
 - [jup-ag/plugin](https://github.com/jup-ag/plugin)
 
 Ce dépôt n'est qu'une base minimale : il sera enrichi par la suite pour offrir toutes les fonctionnalités "Super H" dans l'interface web de ChatGPT.
+
