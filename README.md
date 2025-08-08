@@ -10,7 +10,7 @@ Super H est un plugin d'intégration pour l'interface web de ChatGPT. Il s'inspi
 - 🖱️ **Menu contextuel** : accès rapide aux invites favorites sur tout le web.
 - 🛠️ **Utilitaires** : profils d'instructions, résumés automatiques, sélecteur de modèle, etc.
 
-Le prototype actuel affiche une petite bannière jaune "Super H active" en haut à droite de la page, pouvant être fermée grâce à un bouton.
+Le prototype actuel affiche une bannière jaune « Super H active » en haut à droite de la page. Elle peut être fermée ou utilisée pour injecter un prompt de démonstration dans la zone de saisie de ChatGPT.
 
 ## Structure du dépôt
 
@@ -44,5 +44,4 @@ package.json         # Dépendances (markdown-it, postcss)
 - [awesome-neovim](https://github.com/rockerBOO/awesome-neovim)
 - [jup-ag/plugin](https://github.com/jup-ag/plugin)
 
-Ce dépôt n'est qu'une base minimale : il sera enrichi par la suite pour offrir toutes les fonctionnalités "Super H" dans l'interface web de ChatGPT.
-
+Ce dépôt n'est qu'une base minimale : il sera enrichi par la suite pour offrir toutes les fonctionnalités « Super H » dans l'interface web de ChatGPT.
