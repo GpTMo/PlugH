@@ -3,10 +3,16 @@
   "version": "0.1.0",
   "description": "Super H plugin skeleton for ChatGPT web interface",
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "test": "echo \"No tests specified\"",
+    "build": "vite build && cp manifest.json dist/manifest.json"
   },
   "dependencies": {
-    "markdown-it": "^13.0.1",
-    "postcss": "^8.4.31"
+    "markdown-it": "^13.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31",
+    "vite": "^5.0.0"
   }
 }
