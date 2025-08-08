@@ -21,6 +21,10 @@ src/content.css      # Styles de l'injection (bannière, UI)
 package.json         # Dépendances (markdown-it, postcss)
 ```
 
+## Permissions
+
+Pour fonctionner, l'extension demande la permission `storage` afin d'enregistrer localement les paramètres et invites. Elle déclare également l'hôte `https://chat.openai.com/*` comme autorisation spécifique afin d'obtenir un accès complet à l'interface ChatGPT et injecter son script dès le chargement de la page.
+
 ## Développement
 
 1. Installer les dépendances (facultatif pour ce squelette) :
