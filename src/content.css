@@ -1,0 +1,26 @@
+#super-h-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background: #ffeb3b;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+#super-h-container button {
+  margin-left: 8px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
