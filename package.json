@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "Super H plugin skeleton for ChatGPT web interface",
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "test": "echo \"No tests specified\"",
+    "lint": "echo \"no lint script configured\"",
+    "typecheck": "echo \"no typecheck script configured\""
   },
   "dependencies": {
     "markdown-it": "^14.1.0",
