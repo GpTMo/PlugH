@@ -1,6 +1,7 @@
 #!/usr/bin/env pwsh
 param(
   [switch]$Init,
+  [switch]$Test,
   [string]$Ask,
   [string]$Policy="auto",
   [string]$Profile="chat",
@@ -42,6 +43,20 @@ if (-not (Test-Path $CfgFile)) {
 Start-Transcript -Path $LogFile -Force
 try {
   if ($Init) { Write-Host 'Init complete'; Stop-Transcript; exit 0 }
+  if ($Test) {
+    $btEndpoint = $env:BT_ENDPOINT
+    if (-not $btEndpoint) { throw 'BT_ENDPOINT required' }
+    $btEndpoint = $btEndpoint.TrimEnd('/')
+    if (-not $btEndpoint.ToLower().EndsWith('/v1')) { $btEndpoint += '/v1' }
+    $headers = @{}
+    $apiKey = $env:BT_API_KEY
+    if ($apiKey) { $headers['Authorization'] = "Bearer $apiKey" }
+    $modelsResp = Invoke-WebRequest -Uri "$btEndpoint/models" -Headers $headers -UseBasicParsing
+    if ($modelsResp.StatusCode -ne 200) { throw "Failed to fetch models: $($modelsResp.StatusCode)" }
+    Write-Host $modelsResp.Content
+    Stop-Transcript
+    exit 0
+  }
   $btEndpoint = $env:BT_ENDPOINT
   if (-not $btEndpoint) { throw 'BT_ENDPOINT required' }
   if (-not $Ask) { $Ask = $env:ASK }
