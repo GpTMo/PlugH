@@ -14,7 +14,7 @@ Super H est un plugin d'intégration pour l'interface web de ChatGPT. Il s'inspi
 
 ```
 manifest.json        # Manifest MV3 pour l'extension
-src/content.js       # Script de contenu injecté sur chat.openai.com
+src/content.js       # Script de contenu injecté sur chat.openai.com et chatgpt.com
 package.json         # Dépendances (markdown-it, postcss)
 ```
 
@@ -29,6 +29,7 @@ package.json         # Dépendances (markdown-it, postcss)
    npm test
    ```
 3. Charger le dossier comme extension non empaquetée dans votre navigateur.
+4. Ouvrir `chrome://extensions`, activer le mode développeur et utiliser "Inspect views" pour consulter la console du script de contenu. Un message "Super H content script loaded" confirme l'injection, en plus du bandeau jaune sur la page.
 
 ## Ressources intégrées
 - [Superpower ChatGPT](https://github.com/saeedezzati/superpower-chatgpt)
