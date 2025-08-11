@@ -46,9 +46,9 @@ JSON
 fi
 
 exec > >(tee "$LOG_FILE") 2>&1
-trap 'echo "Error occurred. See $LOG_FILE" > "$ERR_FILE"' ERR
+trap 'echo "Error occurred at line $LINENO: $BASH_COMMAND" > "$ERR_FILE"' ERR
 
-declare -A AUTH_HEADER
+AUTH_HEADER=()
 
 if command -v pwsh >/dev/null 2>&1 && [ -f "$BASE/PSC_Bittensor_Router.ps1" ]; then
   pwsh "$BASE/PSC_Bittensor_Router.ps1" "$@"

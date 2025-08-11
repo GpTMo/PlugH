@@ -17,6 +17,7 @@ $LogFile = Join-Path $LogDir 'last_run.log'
 $ErrFile = Join-Path $LogDir 'install_error.log'
 
 New-Item -ItemType Directory -Force -Path $CfgDir,$LogDir,$SessDir | Out-Null
+Set-Location -Path $Base
 if (-not (Test-Path $CfgFile)) {
 @'
 {
