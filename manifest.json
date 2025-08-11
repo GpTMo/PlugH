@@ -3,6 +3,7 @@
   "name": "Super H",
   "version": "0.1",
   "description": "Experimental Superpower agent for the ChatGPT web interface",
+  "permissions": ["microphone", "camera", "scripting", "activeTab"],
   "host_permissions": [
     "https://chat.openai.com/*",
     "https://chatgpt.com/*"

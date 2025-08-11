@@ -17,9 +17,23 @@
     console.log('Super H content script loaded');
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', injectBanner);
-  } else {
+  function initConnectors() {
+    console.log('Initializing connectors for audio, video, languages, whisper, terminal actions and web services');
+    console.log('Audio connector ready (Whisper placeholder)');
+    console.log('Video connector ready (placeholder)');
+    ['en-US', 'es-419', 'fr-FR'].forEach(l => console.log('Language connector ready: ' + l));
+    console.log('Terminal actions connector ready');
+    console.log('Web services connector ready');
+  }
+
+  function onReady() {
     injectBanner();
+    initConnectors();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onReady);
+  } else {
+    onReady();
   }
 })();

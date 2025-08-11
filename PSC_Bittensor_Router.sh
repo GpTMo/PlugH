@@ -51,7 +51,7 @@ trap 'echo "Error occurred. See $LOG_FILE" > "$ERR_FILE"' ERR
 declare -A AUTH_HEADER
 
 if command -v pwsh >/dev/null 2>&1 && [ -f "$BASE/PSC_Bittensor_Router.ps1" ]; then
-  pwsh "$BASE/PSC_Bittensor_Router.ps1"
+  pwsh "$BASE/PSC_Bittensor_Router.ps1" "$@"
   exit $?
 fi
 
