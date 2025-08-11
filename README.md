@@ -1,4 +1,6 @@
-cest mon premier projet publique soyez indulgent svp # Super H
+C'est mon premier projet publique soyez indulgent svp 
+
+# Super H
 
 Super H est un plugin d'intégration pour l'interface web de ChatGPT. Il s'inspire du projet open source [Superpower ChatGPT](https://github.com/saeedezzati/superpower-chatgpt) et prépare un terrain pour de nombreuses fonctionnalités avancées :
 
